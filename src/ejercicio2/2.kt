@@ -1,20 +1,20 @@
 package ejercicio2
 
 fun main() {
-    val child = 6
-    val adult = 25
-    val senior = 70
+    val child = 5
+    val adult = 28
+    val senior = 87
     val isMonday = true
-    println("El precio de la entrada de cine para una persona de $child años es \$${ticketPrice(child, isMonday)}.")
-    println("El precio de la entrada de cine para una persona de $adult años es \$${ticketPrice(adult, isMonday)}.")
-    println("El precio de la entrada de cine para una persona de $senior años es \$${ticketPrice(senior, isMonday)}.")
+    println("The ticket price for a person aged $child years is \$${ticketPrice(child, isMonday)}.")
+    println("The ticket price for a person aged $adult years is \$${ticketPrice(adult, isMonday)}.")
+    println("The ticket price for a person aged $senior years is \$${ticketPrice(senior, isMonday)}.")
 }
 
 fun ticketPrice(age: Int, isMonday: Boolean): Int {
-    return when {
-        age <= 12 -> 15
-        age in 13..60 -> if (isMonday) 25 else 30
-        age >= 61 && age <= 100 -> 20
+    return when (age){
+        in 1 ..  12 -> 15
+        in 13..60 -> if (isMonday) 25 else 30
+        in 61 .. 100 -> 20
         else -> -1
     }
 }

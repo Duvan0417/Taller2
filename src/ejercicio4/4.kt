@@ -1,14 +1,15 @@
 fun main() {
-    val Martha = Person("Martha", 33, "jugar tenis", null)
-    val Mateo = Person("Mateo", 28, "escalar", Martha)
-    Martha.showProfile()
-    Mateo.showProfile()
+    val Amanda = Person("Amanda", 33, "playing tennis", null)
+    val Atiqah = Person("Atiqah", 28, "climbing", Amanda)
+    Amanda.showProfile()
+    Atiqah.showProfile()
 }
 
 class Person(val name: String, val age: Int, val hobby: String?, val referrer: Person?) {
     fun showProfile() {
-        val referrerInfo = referrer?.let { "Tiene como referente a ${it.name}, que disfruta de ${it.hobby}." }
-            ?: "No tiene un referente."
-        println("Nombre: $name\nEdad: $age\nLe gusta $hobby. $referrerInfo")
+        val referrerInfo = referrer?.let { "Their referrer is ${it.name}, who enjoys ${it.hobby}." }
+            ?: "They have no referrer."
+        println("Name: $name\nAge: $age\nThey like $hobby. $referrerInfo")
+
     }
 }

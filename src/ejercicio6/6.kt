@@ -2,8 +2,8 @@ package ejercicio6
 
 fun main() {
     val winningBid = Bid(5000, "Coleccionista Privado")
-    println("El artículo A se ha vendido por ${auctionPrice(winningBid, 3500)}.")
-    println("El artículo B se ha vendido por ${auctionPrice(null, 4000)}.")
+    println("Item A has been sold for ${auctionPrice(winningBid, 5000)}.")
+    println("Item B has been sold for ${auctionPrice(null, 3000)}.")
 }
 
 class Bid(val amount: Int, val bidder: String)

@@ -1,9 +1,9 @@
 package ejercicio3
 
 fun main() {
-    printFinalTemperature(27.0, "Celsius", "Fahrenheit") { c -> (9.0 / 5.0) * c + 32 }
-    printFinalTemperature(350.0, "Kelvin", "Celsius") { k -> k - 273.15 }
-    printFinalTemperature(10.0, "Fahrenheit", "Kelvin") { f -> (5.0 / 9.0) * (f - 32) + 273.15 }
+    printFinalTemperature(27.0, "Celsius", "Fahrenheit") { (9.0 / 5.0) * it + 32 }
+    printFinalTemperature(350.0, "Kelvin", "Celsius") { it - 273.15 }
+    printFinalTemperature(10.0, "Fahrenheit", "Kelvin") { (5.0 / 9.0) * (it - 32) + 273.15 }
 }
 
 fun printFinalTemperature(
@@ -13,5 +13,5 @@ fun printFinalTemperature(
     conversionFormula: (Double) -> Double
 ) {
     val finalMeasurement = String.format("%.2f", conversionFormula(initialMeasurement))
-    println("$initialMeasurement grados $initialUnit son $finalMeasurement grados $finalUnit.")
+    println("$initialMeasurement degress $initialUnit son $finalMeasurement degress $finalUnit.")
 }
